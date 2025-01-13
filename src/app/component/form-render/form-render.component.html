@@ -1,0 +1,23 @@
+<!-- <div class="form-container">
+
+  <p class="instruction">Select a screen to see the form:</p>
+  <select [(ngModel)]="selectedScreen" (change)="loadForm()">
+    <option *ngFor="let screen of screens" [value]="screen.title">
+      {{ screen.title }}
+    </option>
+  </select>
+  
+  <formio [form]="formJson"></formio>
+</div> -->
+
+<div class="form-container">
+
+  <p class="instruction">Select a screen to see the form:</p>
+  <select [(ngModel)]="selectedScreen" (change)="loadForm()">
+    <option *ngFor="let screen of screens" [value]="screen.title">
+      {{ screen.title }}
+    </option>
+  </select>
+  
+  <formio [form]="formJson" (submit)="onSubmit($event)"></formio>
+</div>

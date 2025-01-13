@@ -1,0 +1,16 @@
+
+<div>
+  <p> let's build form </p>
+
+  <label>Enter Screen name</label>
+  <input type="text" [(ngModel)]="screenName" name="screenName" placeholder=" Enter your Screen Name" />
+
+  <form-builder [form]="form" (change)="onChange($event)"></form-builder>
+
+  <button (click)="saveForm()"> Save-My-Screen</button>
+
+  <div class="well jsonviewer">
+    <pre id="json"><code class="language-json" #json></code></pre>
+  </div>
+  
+</div>

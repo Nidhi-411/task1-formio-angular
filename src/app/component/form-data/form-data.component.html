@@ -1,0 +1,48 @@
+<div class="form-container">
+
+    <p class="instruction">Select a screen to see the form data:</p>
+    <select [(ngModel)]="selectedScreen" (change)="loadForm()">
+      <option *ngFor="let screen of screens" [value]="screen.title">
+        {{ screen.title }}
+      </option>
+    </select>
+   
+    <div class="container">
+        @if(selectedScreen)
+        {
+            <p>Selected Screen is: {{selectedScreen}}</p>
+            <!-- @if(formData && Object.keys(formData).length > 0) -->
+            @if(formData)
+            {
+                <p>Form Data is here:</p>
+                
+                <!-- <div>{{formData | json}}</div> -->
+                <div class="form-data">
+        <table>
+          <thead>
+            <tr>
+              <th>Field Label</th>
+              <th>Submitted Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let field of formDataArray">
+                <td>{{ field.key }}</td>
+                <td>{{ field.value || 'No Data' }}</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+            }
+            @else
+            {
+                <p>Form is not filled yet.</p>
+            }
+        }
+        @else
+        {
+            <p>Please select a screen first.</p>
+        }
+      </div>
+  </div>

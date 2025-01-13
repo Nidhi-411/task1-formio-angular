@@ -1,0 +1,66 @@
+
+/* Style the container */
+.form-container {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  /* Style the instruction */
+  .instruction {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px; /* Space between instruction and dropdown */
+  }
+
+
+
+/* Style the dropdown */
+select {
+  width: 40%; /* Take up most of the width */
+  padding: 10px; /* Add padding for better spacing */
+  font-size: 16px; /* Larger font for readability */
+  font-weight: 500; /* Slightly bold text */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+  margin-bottom: 20px; /* Space below the dropdown */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Dropdown hover and focus styles */
+select:hover, select:focus {
+  border-color: #007bff; /* Blue border on hover */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
+}
+
+/* Style the formio container */
+formio {
+  display: block; 
+  margin: 20px auto; 
+  max-width: 100%; 
+   background-color: #ffffff;  
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  div {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  select {
+    width: 100%; /* Full width dropdown for smaller screens */
+  }
+}
